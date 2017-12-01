@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="nsStudent">
+	
+
+	<resultMap type="entity.Student" id="StudentResultMap">
+		<result property="studentNo" column="studentNo"/>
+		<result property="studentName" column="studentName" />
+		<result property="sex" column="sex"/>
+	</resultMap>
+
+  <select id="findAllStudent" resultMap="StudentResultMap">
+  	select * from student
+  </select>
+</mapper>
